@@ -1,0 +1,63 @@
+var name > int = 12 + 213;
+
+fun _print(arg: &str) -> ()
+{
+    print("> {} <".format(arg));
+}
+
+var shit > bool = true;
+
+if shit
+{
+    _print("shit");
+}
+else
+{
+    _print("shittier");
+}
+
+
+------- keyword -------
+import          import from a file
+
+var             variables
+fun             functions
+class           classes
+
+for             for loop
+while           while loop
+
+break           break out of a loop
+return          exit function and return val
+yield           generator return
+
+------- visualize -------
+
+name = 12 + 213;
+        define
+name            exp (+)
+            12           213
+
+{
+    "type": "define,
+    "left":
+    {
+        "type": "identifier",
+        "name": "name",
+    },
+    "right":
+    {
+        "type": "expression",
+        "operation": "+",
+        "left":
+        {
+            "type": "int",
+            "value": 12,
+        },
+        "left":
+        {
+            "type": "int",
+            "value": 213,
+        }
+    }
+}
