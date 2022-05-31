@@ -1,6 +1,7 @@
 # Yet-Another-Programming-Language
 A language that's written in rust
-[Base]
+
+# Base
 ```
 var name > int = 32;
 
