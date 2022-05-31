@@ -3,8 +3,26 @@ A language that's written in rust
 
 # Base
 ```
-var name > int = 32;
+var name_var > int = 32;
 
-int name = 32;
+func name(arg: int) > int {
+  return arg;
+}
 
+var name_var_2 > int = name(32);
+print(name_var_2);
+/
+\\ this is a comment
+\\ c equivalent
+
+
+int name_var = 32;
+
+int name(int arg) {
+  return arg
+}
+
+int name_var_2 = name(32);
+printf("%i", name_var_2);
+/
 ```
