@@ -1,5 +1,5 @@
 # Yet-Another-Programming-Language
-A language that's written in rust
+A language that's written in rust, that temporarily compiles to python
 
 # Base
 ```
