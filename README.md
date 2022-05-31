@@ -31,5 +31,17 @@ printf("%i", name_var_2);
 \ python:print(a) \ 
 \the line above will compile to python as 'print(a)' instead of nothing\
 
+\-------------------\
+
+var name_var > int = 32;
+\print(name_var)\
+
+\-------------------\
+\
+# in python
+name_var: int = 32
+print(name_var)
+
+\
 
 ```
