@@ -13,7 +13,7 @@ use std::env;
 fn main()
 {
     let args: Vec<String> = env::args().collect();
-    let mut path ="in/main.yal";
+    let mut path ="in/main.yapl";
     if args.len() > 1{
         path = args.get(1).unwrap();
     }
