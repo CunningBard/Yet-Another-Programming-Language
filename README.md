@@ -26,3 +26,10 @@ int name_var_2 = name(32);
 printf("%i", name_var_2);
 /
 ```
+# temporary?
+```
+\ python:print(a) \ 
+\the line above will compile to python as 'print(a)' instead of nothing\
+
+
+```
