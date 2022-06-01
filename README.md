@@ -34,7 +34,7 @@ printf("%i", name_var_2);
 \-------------------\
 
 var name_var > int = 32;
-\print(name_var) \
+\python:print(name_var) \
 
 \-------------------\
 \
