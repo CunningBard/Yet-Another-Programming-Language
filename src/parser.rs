@@ -239,6 +239,9 @@ impl Parser
                         }
                     }
                 }
+                else if self.current_token.token_type == "fun_keyword" {
+
+                }
             }
             else
             {
