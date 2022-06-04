@@ -1,2 +1,3 @@
 name: str = "asd "
-print(name * 2)
+name1: int = 123
+print(name,name1)

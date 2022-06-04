@@ -294,7 +294,7 @@ impl Lexer {
                         }
                         non_single_char = String::from("");
                     }
-                    else if number_on
+                    else if number_on && !identifier_on
                     {
                         number_on = false;
                         if number_type == "int" { self.create_int(non_single_char.clone()) }
@@ -307,7 +307,7 @@ impl Lexer {
                         self.newline();
                     }
                 }
-                else if self.the_nums.contains(&self.current_char)
+                else if self.the_nums.contains(&self.current_char) && !identifier_on
                 {
                     if !number_on
                     {

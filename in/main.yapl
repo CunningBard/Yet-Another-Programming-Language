@@ -1,2 +1,3 @@
 var name > str = "asd ";
-/python:print(name * 2)/
+var name1 > int = 123;
+print(name, name1)

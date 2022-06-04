@@ -10,6 +10,30 @@ pub struct VariableSingleValued
 }
 
 #[derive(Debug, Clone)]
+pub struct Arguments
+{
+    pub value: Token,
+    pub data_type: Token,
+    pub name: Token,
+    pub is_const: bool,
+}
+
+#[derive(Debug, Clone)]
+pub struct Function
+{
+    pub value: Vec<YAL>,
+    pub return_type: Token,
+    pub name: Token
+}
+
+#[derive(Debug, Clone)]
+pub struct FunctionCall
+{
+    pub values: Vec<Token>,
+    pub name: Token
+}
+
+#[derive(Debug, Clone)]
 pub struct Py
 {
     pub value: String
@@ -19,5 +43,6 @@ pub struct Py
 pub enum YAL
 {
     VariableSingleValue(VariableSingleValued),
-    Py(Py)
+    Py(Py),
+    FuncCall(FunctionCall)
 }

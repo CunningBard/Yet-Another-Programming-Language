@@ -1,6 +1,6 @@
 use crate::error::Error;
 use crate::lexer::{Lexer, Token, TokensWithLogAndError};
-use crate::data_types::{YAL, VariableSingleValued, Py};
+use crate::data_types::{YAL, VariableSingleValued, Py, FunctionCall};
 
 fn substring(str: String, start: i32, end: i32) ->  Option<String>
 {
@@ -241,6 +241,49 @@ impl Parser
                 }
                 else if self.current_token.token_type == "fun_keyword" {
 
+                }
+                else if self.current_token.token_type == "identifier" {
+                    let name = self.current_token.clone();
+                    if !self.next_token_ignore_spaces() {
+                        err = Error::expectation_error("Expected an expression", self.current_token.x, self.current_token.y);
+                        self.run = false;
+                        break;
+                    }
+                    else if self.current_token.token_type == "paren lft" {
+                        unimplemented!("make func call check if function exists");
+
+                        let mut args = vec![];
+                        let mut expect_comma = false;
+                        while self.current_token.token_type != "paren rht" {
+                            if self.next_token_ignore_spaces(){
+                                if self.current_token.token_type == "identifier" {
+                                    if expect_comma {
+                                        err = Error::expectation_error("Expected a comma seperator", self.current_token.x, self.current_token.y);
+                                        self.run = false;
+                                        break;
+                                    }
+
+                                    args.push(self.current_token.clone());
+                                    expect_comma = true;
+                                } else if self.current_token.token_type == "comma" {
+                                    if !expect_comma {
+                                        err = Error::expectation_error("Expected a reference to a obj", self.current_token.x, self.current_token.y);
+                                        self.run = false;
+                                        break;
+                                    }
+                                    expect_comma = false;
+                                } else if self.current_token.token_type != "paren rht" {
+                                    println!("{:?}", self.current_token);
+                                    assert!(false, "huh?")
+                                }
+                            }
+                        }
+                        if !self.run {
+                            break;
+                        }
+
+                        self.yal.push(YAL::FuncCall(FunctionCall{ values: args, name}))
+                    }
                 }
             }
             else
