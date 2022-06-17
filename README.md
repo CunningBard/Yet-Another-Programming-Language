@@ -4,7 +4,7 @@ A language that's written in rust, that temporarily compiles to python
 # Road Map
 - [x] Basic Variable Definition
 - [ ] Basic Function Definition
-- 
+
 - [ ] Full Variable Definition
 - [ ] Full Function Definition
 - [ ] Function Call
