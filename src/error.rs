@@ -65,11 +65,22 @@ impl Error {
             y
         }
     }
-    pub fn mismatched_type(desc: &str, x: i32, y: i32) -> Error
+    pub fn mismatched_type_error(desc: &str, x: i32, y: i32) -> Error
     {
         Error
         {
             err: "Mismatched types".to_string(),
+            desc: desc.to_string(),
+            trace_back: "NONE".to_string(),
+            x,
+            y
+        }
+    }
+    pub fn undefined_error(desc: &str, x: i32, y: i32) -> Error
+    {
+        Error
+        {
+            err: "Undefined".to_string(),
             desc: desc.to_string(),
             trace_back: "NONE".to_string(),
             x,
