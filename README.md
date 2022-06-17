@@ -5,13 +5,14 @@ A language that's written in rust, that temporarily compiles to python
 ### Basics
 - [x] Basic Variable Definition
 - [ ] Basic Function Definition
+- [ ] Basic Function Call (what works: calling sys defined functions)
 
 ### Full
 - [ ] Full Variable Definition
 - [ ] Full Function Definition
+- [ ] Full Function Call
 
 ### Others
-- [ ] Function Call
 - [ ] Variable Definition
 - [ ] Variable Definition 
 
