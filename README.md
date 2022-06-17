@@ -19,12 +19,12 @@ A language that's written in rust, that temporarily compiles to python
 ### Meaning
 Basic Variable Definition
 - cant define a variable from function returns
-- works "var name > int = 123;"
+- works `var name > int = 123;`
 - doesnt works `var name > int = name();`
 
 Full Variable Definition
 - can define a variable from function returns
-- works "var name > int = 123;"
+- works `var name > int = 123;`
 - also works `var name > int = name();`
 
 # Base
