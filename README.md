@@ -1,5 +1,7 @@
-# Yet-Another-Programming-Language
+# **OBSOLOTE** Yet-Another-Programming-Language
 A language that's written in rust, that temporarily compiles to python
+
+# NOTE: this is now obsolete, a re write is on a different repo(https://github.com/CunningBard/YAPL_rewrite) 
 
 # Road Map
 ### Basics
