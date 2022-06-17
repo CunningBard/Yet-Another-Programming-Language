@@ -111,6 +111,8 @@ impl Parser
                          "float".to_string(), "bool".to_string(), "list".to_string(),
                          "vec".to_string(), "map".to_string()];
         let ops = vec!["+".to_string(), "-".to_string(), "*".to_string(), "/".to_string()];
+        let sys_defined_functions = vec!["print"];
+        let user_defined_functions = vec![""];
 
         let mut err = Error::none();
         /*
@@ -189,7 +191,7 @@ impl Parser
                                     self.run = false;
                                     break;
                                 } else if self.current_token.token_type != var_type.value {
-                                    err = Error::mismatched_type(&format!("Mismatched Type expected a '{}' got '{}' instead", &var_type.value, &self.current_token.token_type), self.current_token.x, self.current_token.y);
+                                    err = Error::mismatched_type_error(&format!("Mismatched Type expected a '{}' got '{}' instead", &var_type.value, &self.current_token.token_type), self.current_token.x, self.current_token.y);
                                     self.run = false;
                                     break;
                                 } else {
@@ -250,7 +252,9 @@ impl Parser
                         break;
                     }
                     else if self.current_token.token_type == "paren lft" {
-                        unimplemented!("make func call check if function exists");
+                        if !sys_defined_functions.contains(&&*name.value) && !user_defined_functions.contains(&&*name.value){
+                            err = Error::undefined_error(&format!("function '{}' doesn't exist in the current context", name.value), self.current_token.x, self.current_token.y)
+                        }
 
                         let mut args = vec![];
                         let mut expect_comma = false;
