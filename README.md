@@ -1,6 +1,14 @@
 # Yet-Another-Programming-Language
 A language that's written in rust, that temporarily compiles to python
 
+# Road Map
+- [ x ] Basic Variable Definition
+- [   ] Full Variable Definition
+- [   ] Function Definition
+- [   ] Function Call
+- [   ] Variable Definition
+- [   ] Variable Definition
+
 # Base
 ```
 var name_var > int = 32;
