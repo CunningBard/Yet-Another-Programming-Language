@@ -2,11 +2,15 @@
 A language that's written in rust, that temporarily compiles to python
 
 # Road Map
+## Basics
 - [x] Basic Variable Definition
 - [ ] Basic Function Definition
 
+## Full
 - [ ] Full Variable Definition
 - [ ] Full Function Definition
+
+## others
 - [ ] Function Call
 - [ ] Variable Definition
 - [ ] Variable Definition 
